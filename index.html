@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>scroll kro  Akshay ji❤️</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<style>
+
+    /* Custom Styles for Golden Scroll Theme (Cream, Rose Gold, Pink) */
+
+    
+
+    body {
+
+        font-family: 'Playfair Display', serif; /* Applied new elegant font */
+
+        background-color: #FAF9F6; /* Soft Cream/Off-White Background */
+
+        color: #333333; /* Deep Charcoal/Dark Gray Text */
+
+        scroll-behavior: smooth;
+
+        overflow-x: hidden;
+
+    }
+
+
+
+    /* --- 1. FLOATING ROSE PETALS (Hearts & Love Symbols) --- */
+
+    @keyframes floatPetals {
+
+        0% { transform: translate(0, 0) rotate(0deg); opacity: 0.5; }
+
+        50% { transform: translate(25px, -120px) rotate(10deg); opacity: 0.9; }
+
+        100% { transform: translate(-25px, 0) rotate(-10deg); opacity: 0.5; }
+
+    }
+
+
+
+    .floating-petal {
+
+        position: fixed;
+
+        z-index: 1;
+
+        animation: floatPetals 12s infinite ease-in-out alternate;
+
+        color: #E3A398; /* Soft Rose Gold Color */
+
+        text-shadow: 0 0 5px rgba(255, 204, 204, 0.5); 
+
+        filter: drop-shadow(0 0 3px #F9B4AB);
+
+    }
+
+
+
+    /* --- 2. SECTION BASE STYLE --- */
+
+    .section {
+
+        min-height: 100vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding: 80px 20px;
+
+        position: relative;
+
+        z-index: 10;
+
+    }
+
+    
+
+    /* --- 3. SPLASH SCREEN (ELEGANT COVER) --- */
+
+    #splashScreen {
+
+        background: linear-gradient(to bottom right, #FAF9F6, #F9B4AB);
+
+        transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+
+        z-index: 9999;
+
+    }
+
+    .elegant-title {
+
+        color: #8C433C; /* Deep Rose Red */
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+        letter-spacing: 3px;
+
+    }
+
+
+
+    /* Elegant Button (Rose Gold Theme) */
+
+    .elegant-button {
+
+        background-color: #E3A398; /* Rose Gold */
+
+        color: #FFFFFF;
+
+        border: 1px solid #C88D7F;
+
+        transition: all 0.3s;
+
+        font-family: 'Playfair Display', serif;
+
+    }
+
+    .elegant-button:hover {
+
+        background-color: #C88D7F; /* Darker Rose Gold hover */
+
+        transform: scale(1.05);
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+    /* --- 4. MEMORY ALBUM STYLE --- */
+
+    .memory-card {
+
+        transition: transform 0.6s, box-shadow 0.6s;
+
+        border: 5px solid #E3A398; /* Rose Gold Border */
+
+        background-color: #FFFFFF;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+        cursor: pointer; /* Pointer to show it's clickable */
+
+    }
+
+    .memory-card:hover {
+
+        transform: translateY(-10px) rotate(-1deg);
+
+        box-shadow: 0 15px 30px rgba(227, 163, 152, 0.7); /* Rose Gold Glow */
+
+    }
+
+    .memory-card img, .memory-card video {
+
+        /* Common style for both image and video media elements */
+
+        border-bottom: 3px solid #E3A398;
+
+    }
+
+    
+
+    /* --- 5. VOICE NOTE GRAMOPHONE STYLE --- */
+
+    .voice-section {
+
+        background-color: #FFFFFF;
+
+        border: 1px solid #E3A398;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    }
+
+
+
+    /* --- 6. CUSTOM MESSAGE BOX --- */
+
+    #customMessageBox {
+
+        position: fixed;
+
+        top: 50%;
+
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        background-color: #FFFFFF;
+
+        border: 2px solid #E3A398;
+
+        border-radius: 8px;
+
+        padding: 25px;
+
+        box-shadow: 0 0 40px rgba(227, 163, 152, 0.7);
+
+        z-index: 10000;
+
+        max-width: 90vw;
+
+        text-align: center;
+
+    }
+
+    #customMessageBox .fa-exclamation-triangle {
+
+        color: #8C433C; /* Deep Rose Red Icon */
+
+    }
+
+    #customMessageBox button {
+
+         background-color: #E3A398; 
+
+         color: white;
+
+    }
+
+
+
+    /* --- 7. NEW FULL-SCREEN CONFETTI BLAST ANIMATION --- */
+
+    @keyframes confettiBlast {
+
+        0% { 
+
+            transform: translate(0, 0) rotate(0deg); 
+
+            opacity: 1; 
+
+        }
+
+        100% { 
+
+            /* Uses dynamic variables to shoot confetti outwards across the screen */
+
+            transform: translate(calc(var(--confetti-x) * 1px), calc(var(--confetti-y) * 1px)) rotate(var(--confetti-rot) * 1deg); 
+
+            opacity: 0; 
+
+        }
+
+    }
+
+    
+
+    .confetti {
+
+        position: fixed; 
+
+        animation: confettiBlast var(--confetti-duration) ease-out forwards;
+
+        z-index: 10000; /* High z-index to appear over everything */
+
+    }
+
+
+
+    /* --- 8. NEW CLICK EFFECT ANIMATION (Hearts & Teddy Bear) --- */
+
+    @keyframes burstFloat {
+
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+
+        50% { opacity: 0.8; }
+
+        100% { 
+
+            /* Uses CSS variables for dynamic movement */
+
+            transform: translate(var(--dx), var(--dy)) scale(0.5); 
+
+            opacity: 0; 
+
+        }
+
+    }
+
+
+
+    .click-effect-element {
+
+        position: fixed; /* Changed from absolute to fixed to follow screen */
+
+        z-index: 9999; /* Very high z-index to appear over message box */
+
+        pointer-events: none; /* Ignore pointer events so it doesn't block the card */
+
+        animation: burstFloat 1s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth end */
+
+        will-change: transform, opacity;
+
+    }
+
+</style>
+
+</head><body><div class="section fixed top-0 left-0 w-full h-full" id="splashScreen">
+
+    <h1 class="elegant-title text-4xl md:text-6xl font-extrabold mb-4 italic">
+
+       ... Special for you Akshay jii ...
+
+    </h1>
+
+    <p class="text-xl mb-12 text-gray-700">
+
+        Akshay ji special day celebrate kre ....
+
+    </p>
+
+    <button id="enterButton" class="elegant-button py-4 px-10 text-xl font-bold rounded-full shadow-lg">
+
+        Open the Scroll Akshay ji <i class="fas fa-arrow-right ml-2"></i>
+
+    </button>
+
+</div>
+
+
+
+<div id="mainContent" class="hidden">
+
+    
+
+    <nav class="fixed top-0 left-0 right-0 bg-white bg-opacity-95 shadow-lg z-50 p-4 border-b border-gray-200">
+
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+
+            <a href="#home" class="text-2xl font-extrabold text-[#8C433C] tracking-wide italic"> My Birthday Gift </a>
+
+            <div class="space-x-4 flex">
+
+                <a href="#home" class="text-gray-600 hover:text-[#E3A398] transition hover:underline text-sm sm:text-base">HOME</a>
+
+                <a href="#memories" class="text-gray-600 hover:text-[#E3A398] transition hover:underline text-sm sm:text-base">ALBUM</a>
+
+                <a href="#voice" class="text-gray-600 hover:text-[#E3A398] transition hover:underline text-sm sm:text-base">MESSAGE</a>
+
+                <a href="#final" class="text-gray-600 hover:text-[#E3A398] transition hover:underline text-sm sm:text-base">WISH</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <section id="home" class="section bg-gradient-to-br from-cream-100 to-white">
+
+        <h1 class="text-7xl md:text-9xl font-extrabold mb-4 text-[#8C433C] tracking-tight italic">
+
+            Happy Birthday to you 
+
+        </h1>
+
+        <h2 class="text-4xl font-light mb-8 text-gray-700 border-b-2 border-[#E3A398] pb-2">
+
+            My Dear Akshay ji 
+
+        </h2>
+
+        <div class="relative p-8 bg-white rounded-3xl shadow-xl max-w-3xl w-full border border-gray-100">
+
+            <p class="text-3xl text-gray-700 italic leading-relaxed text-center">
+
+                "Tum woh roshni ho jo meri duniya ko hamesha roshan rakhti hai. Yeh chhota sa tohfa, tumhare liye."
+
+            </p>
+
+            <i class="fas fa-heart absolute top-4 right-4 text-[#E3A398] text-opacity-70 text-4xl"></i>
+
+            <span class="absolute bottom-4 left-4 text-5xl opacity-80">🧸</span> 
+
+        </div>
+
+    </section>
+
+
+
+    <section id="memories" class="section bg-[#FAF9F6]">
+
+        <h2 class="text-5xl font-bold text-[#8C433C] mb-12 border-b-4 border-[#E3A398] pb-2">
+
+            Our Beautiful Memories
+
+        </h2>
+
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
+
+            <div class="rounded-lg shadow-lg memory-card" onclick="triggerMemorySurprise(event, ' Funniest Face! 😄 Hamesha aise hi khush rehna.')">
+
+                <img src="image1.jpg" alt="Memory 1 (Fun Face)" class="w-full h-64 object-cover">
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">Our Funniest Pose</h3>
+
+                    <p class="text-sm text-gray-500">Jab humne masti ki.</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="rounded-lg overflow-hidden shadow-lg memory-card" onclick="triggerMemorySurprise(event, 'Woh Khubsurat Smile. ❤️')">
+
+                <img src="image2.jpg" alt="Memory 2 (Big Smile)" class="w-full h-64 object-cover">
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">The Best Smile</h3>
+
+                    <p class="text-sm text-gray-500">Tumhari pyaari muskaan.</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="rounded-lg overflow-hidden shadow-lg memory-card" onclick="triggerMemorySurprise(event, 'Hamesha Saath, Andhere Mein Bhi. ✨')">
+
+                <img src="image3.jpg" alt="Memory 3 (Blue Dupatta)" class="w-full h-64 object-cover">
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">The Sweetest Glance</h3>
+
+                    <p class="text-sm text-gray-500">Ek dusre ki taraf dekhte hue.</p>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="rounded-lg overflow-hidden shadow-lg memory-card" onclick="triggerMemorySurprise(event, 'Khushiyan Batorna. 🤗')">
+
+                <img src="image4.jpg" alt="Memory 4 (Close Glance)" class="w-full h-64 object-cover">
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">Close to My Heart</h3>
+
+                    <p class="text-sm text-gray-500">Har pal anmol hai.</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="rounded-lg overflow-hidden shadow-lg memory-card" onclick="triggerMemorySurprise(event, 'Dil se Dil Tak ka Safar. 👑')">
+
+                <img src="image5.jpg" alt="Memory 5 (B&W Hearts)" class="w-full h-64 object-cover">
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">My King, My Queen</h3>
+
+                    <p class="text-sm text-gray-500">Sirf pyaar hi pyaar.</p>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="rounded-lg overflow-hidden shadow-lg memory-card" onclick="triggerMemorySurprise(event, ' Woh Raat Jab Hum Mile. 🌙')">
+
+                <img src="image6.jpg" alt="Memory 6 (Night Shot)" class="w-full h-64 object-cover">
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">The Date Night</h3>
+
+                    <p class="text-sm text-gray-500">Sirf tum aur mai.</p>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="rounded-lg overflow-hidden shadow-lg memory-card" onclick="triggerMemorySurprise(event, ' Khaane ka Pyaar 😋')">
+
+                <img src="image7.jpg" alt="Memory 7 (Food Time)" class="w-full h-64 object-cover">
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">Food, Fun, and Us</h3>
+
+                    <p class="text-sm text-gray-500">Har kadam par saath.</p>
+
+                </div>
+
+            </div>
+
+            
+
+             <div class="rounded-lg overflow-hidden shadow-lg memory-card relative" onclick="triggerMemorySurprise(event, 'Yeh hai hamara sabse naya aur pyaara video! (Agar video file add ki hai)')">
+
+                <video src="your_special_video.mp4.mp4" loop muted controls class="w-full h-64 object-cover">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+                <i class="fas fa-video absolute top-2 right-2 text-white bg-black bg-opacity-50 p-1 rounded-full text-lg"></i>
+
+                
+
+                <div class="p-4 text-center">
+
+                    <h3 class="font-bold text-xl text-[#8C433C]">A Moving Memory 🎬</h3>
+
+                    <p class="text-sm text-gray-500">Video dekho aur muskurao</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+    </section>
+
+    
+
+    <section id="voice" class="section bg-white border-t border-b border-[#F9B4AB]">
+
+        <h2 class="text-5xl font-bold text-[#E3A398] mb-12 border-b-4 border-[#8C433C] pb-2">
+
+           akshay ye bhii...
+
+        </h2>
+
+
+
+        <div class="p-8 voice-section rounded-xl shadow-2xl max-w-2xl w-full border-4 border-[#E3A398]">
+
+            <div class="text-center mb-6">
+
+                <i class="fas fa-volume-up text-6xl text-[#8C433C]"></i>
+
+                <h3 class="text-3xl font-semibold text-gray-800 mt-4">Play kro ji soch nhi jada ../h3>
+
+            </div>
+
+            <p class="text-gray-600 mb-6 text-center italic">
+
+                Yeh meri awaaz me kuch ho jaye...
+
+            </p>
+
+
+
+            <audio id="loveAudio" src="" controls class="hidden"></audio> 
+
+            
+
+            <button id="playVoiceButton" class="elegant-button w-full py-4 text-xl font-bold rounded-lg shadow-lg">
+
+                <i class="fas fa-play mr-2"></i> Suno jii...
+
+            </button>
+
+
+
+            <div class="voice-wave flex justify-center mt-4 hidden" id="voiceWave">
+
+                <div class="bar"></div>
+
+                <div class="bar"></div>
+
+                <div class="bar"></div>
+
+                <div class="bar"></div>
+
+                <div class="bar"></div>
+
+                <span class="ml-4 text-[#8C433C]">...pyari se awaaz me ...</span>
+
+            </div>
+
+        </div>
+
+        
+
+        <p class="mt-12 text-xl text-gray-600 italic max-w-2xl text-center">
+
+            "hwish you birhtday you , I love you, Akshay."
+
+        </p>
+
+    </section>
+
+
+
+    <section id="final" class="section bg-[#FAF9F6]">
+
+        <i class="fas fa-gift text-6xl text-[#E3A398] mb-6 animate-pulse"></i>
+
+        <h2 class="text-6xl md:text-7xl font-extrabold text-[#8C433C] mb-4 italic">
+
+            Meri Pyari Wishes hamesha tumre sath rhe .
+
+        </h2>
+
+        <p class="text-2xl text-gray-600 mb-8 max-w-xl text-center">
+
+            Akshay ji aaj ke din ke sath hamesha achha jaye.
+
+        </p>
+
+        <button id="confettiButton" class="elegant-button py-4 px-10 text-2xl font-bold rounded-full shadow-xl">
+
+            WISH open karo 🎉
+
+        </button>
+
+        <div class="confetti-container" id="confettiContainer"></div>
+
+    </section>
+
+    
+
+    <footer class="p-6 text-center text-sm bg-white border-t border-[#E3A398]">
+
+        <p class="text-gray-500 italic">Hamesha Tumhari ❤️</p>
+
+    </footer>
+
+</div>
+
+
+
+<div id="customMessageBox" class="hidden">
+
+    <div class="text-3xl text-[#8C433C] mb-4"><i class="fas fa-exclamation-triangle mr-2"></i> .....</div>
+
+    <p id="messageBoxText" class="text-lg text-gray-700 mb-6"></p>
+
+    <button id="closeMessageBox" class="py-2 px-6 elegant-button rounded-full hover:bg-pink-600 transition">OK</button>
+
+</div>
+
+
+
+<script>
+
+    // --- 1. GLOBAL VARIABLES ---
+
+    const splashScreen = document.getElementById('splashScreen');
+
+    const mainContent = document.getElementById('mainContent');
+
+    const enterButton = document.getElementById('enterButton');
+
+    const confettiButton = document.getElementById('confettiButton');
+
+    const playVoiceButton = document.getElementById('playVoiceButton');
+
+    const voiceWave = document.getElementById('voiceWave');
+
+    const loveAudio = document.getElementById('loveAudio');
+
+    // Custom Message Box Variables
+
+    const customMessageBox = document.getElementById('customMessageBox');
+
+    const messageBoxText = document.getElementById('messageBoxText');
+
+    const closeMessageBox = document.getElementById('closeMessageBox');
+
+
+
+    // IMPORTANT: Yahan apni audio file ka naam/URL daaliye
+
+    loveAudio.src = 'your_voice_note.mp3'; 
+
+
+
+    // --- 2. SURPRISE ENTRY LOGIC ---
+
+    enterButton.addEventListener('click', () => {
+
+        splashScreen.style.opacity = '0';
+
+        splashScreen.style.transform = 'translateY(-100%)';
+
+        
+
+        setTimeout(() => {
+
+            splashScreen.style.display = 'none';
+
+            mainContent.classList.remove('hidden');
+
+            
+
+            // Start dynamic elements
+
+            createFloatingElements();
+
+            
+
+            // --- UPDATE: Trigger Heart Boom Effect on Scroll Open (Center of Screen) ---
+
+            const centerX = window.innerWidth / 2;
+
+            const centerY = window.innerHeight / 2;
+
+            // Increased heart count in createClickEffect for a stronger 'boom' effect
+
+            createClickEffect(centerX, centerY);
+
+            // -------------------------------------------------------------------------
+
+
+
+        }, 1000); 
+
+    });
+
+
+
+    
+
+    // --- 3. FLOATING ROSE PETALS LOGIC ---
+
+    function createFloatingElements() {
+
+        // Symbols are now romantic and soft
+
+        const symbols = ['🌹', '💖', '✨', '💌']; 
+
+        const numElements = 35; 
+
+
+
+        for (let i = 0; i < numElements; i++) {
+
+            const element = document.createElement('span');
+
+            const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+            
+
+            element.textContent = symbol;
+
+            element.classList.add('floating-petal');
+
+            
+
+            // Random position and animation properties
+
+            element.style.left = `${Math.random() * 100}vw`;
+
+            element.style.top = `${Math.random() * 100}vh`;
+
+            element.style.fontSize = `${18 + Math.random() * 18}px`; 
+
+            element.style.animationDelay = `${Math.random() * 7}s`;
+
+            element.style.animationDuration = `${7 + Math.random() * 8}s`;
+
+            element.style.opacity = `${0.3 + Math.random() * 0.4}`;
+
+
+
+            document.body.appendChild(element);
+
+        }
+
+    }
+
+    
+
+    // --- 4. MEMORY CARD CLICK SURPRISE LOGIC ---
+
+    
+
+    function showMessage(message) {
+
+        messageBoxText.textContent = message;
+
+        customMessageBox.classList.remove('hidden');
+
+    }
+
+
+
+    closeMessageBox.addEventListener('click', () => {
+
+        customMessageBox.classList.add('hidden');
+
+    });
+
+
+
+    /**
+
+     * Triggers the message box and the heart/teddy bear burst effect.
+
+     * @param {Event} e - The click event to get coordinates.
+
+     * @param {string} message - The message to display in the box.
+
+     */
+
+    function triggerMemorySurprise(e, message) {
+
+        // 1. Show the informational message box
+
+        showMessage(message);
+
+        
+
+        // 2. Trigger the floating heart and teddy effect at the click location
+
+        // Only trigger the effect if it's a genuine card click event
+
+        if (e && e.clientX !== undefined) {
+
+             createClickEffect(e.clientX, e.clientY);
+
+        }
+
+    }
+
+
+
+    /**
+
+     * Creates a burst of hearts and a floating teddy bear at the given screen coordinates (x, y).
+
+     */
+
+    function createClickEffect(x, y) {
+
+        const symbols = ['💖', '❤️', '✨'];
+
+        const numHearts = 30; // Increased heart count for a stronger 'boom' effect
+
+        
+
+        // 1. Create Hearts Burst
+
+        for (let i = 0; i < numHearts; i++) {
+
+            const element = document.createElement('span');
+
+            element.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+            element.classList.add('click-effect-element');
+
+            
+
+            // Set initial position (where the user clicked/effect center)
+
+            element.style.left = `${x}px`;
+
+            element.style.top = `${y}px`;
+
+            element.style.fontSize = `${16 + Math.random() * 12}px`; // Slightly larger hearts for boom
+
+            
+
+            // Define end coordinates using CSS Variables (spread and float up/out)
+
+            const dx = (Math.random() - 0.5) * 350; // Increased spread for boom
+
+            const dy = -100 - (Math.random() * 300); // Shoot further up
+
+            
+
+            element.style.setProperty('--dx', `${dx}px`);
+
+            element.style.setProperty('--dy', `${dy}px`);
+
+            element.style.animationDelay = `${Math.random() * 0.1}s`; 
+
+            element.style.animationDuration = '1.2s'; // Slightly longer duration
+
+            
+
+            document.body.appendChild(element);
+
+            
+
+            // Cleanup after animation
+
+            setTimeout(() => element.remove(), 1200);
+
+        }
+
+        
+
+        // 2. Create Teddy Bear (keeping one, larger)
+
+        const teddy = document.createElement('span');
+
+        teddy.textContent = '🧸';
+
+        teddy.classList.add('click-effect-element');
+
+        
+
+        // Set initial position
+
+        teddy.style.left = `${x}px`;
+
+        teddy.style.top = `${y}px`;
+
+        teddy.style.fontSize = `50px`; // Larger teddy bear
+
+        
+
+        // Define end coordinates for Teddy 
+
+        const teddyDx = (Math.random() - 0.5) * 150;
+
+        const teddyDy = -200 - (Math.random() * 100);
+
+        
+
+        teddy.style.setProperty('--dx', `${teddyDx}px`);
+
+        teddy.style.setProperty('--dy', `${teddyDy}px`);
+
+        teddy.style.animationDuration = '1.8s'; // Slower float
+
+        teddy.style.animationDelay = '0.1s'; 
+
+
+
+        document.body.appendChild(teddy);
+
+        
+
+        // Cleanup after animation
+
+        setTimeout(() => teddy.remove(), 1800); 
+
+    }
+
+
+
+    // --- 5. VOICE NOTE LOGIC ---
+
+    playVoiceButton.addEventListener('click', () => {
+
+        // Check if the audio source is still the default placeholder
+
+        if (loveAudio.src.endsWith('your_voice_note.mp3')) {
+
+            showMessage('Audio File Missing: Kripya script mein "your_voice_note.mp3" ko apni sahi audio file ke naam se badlein. Abhi koi file mili nahi.');
+
+            return; 
+
+        }
+
+
+
+        if (loveAudio.paused) {
+
+            loveAudio.play().then(() => {
+
+                playVoiceButton.innerHTML = '<i class="fas fa-pause mr-2"></i> Rok do Paigham';
+
+                voiceWave.classList.remove('hidden');
+
+            }).catch(error => {
+
+                showMessage('Error Playing Audio: Browser ne autoplay rok diya ya audio format support nahi hai. Console mein zyada jaankari check karein.');
+
+                console.error('Audio Playback Error:', error);
+
+            });
+
+        } else {
+
+            loveAudio.pause();
+
+            playVoiceButton.innerHTML = '<i class="fas fa-play mr-2"></i> Suno Mera Khamosh Paigham';
+
+            voiceWave.classList.add('hidden');
+
+        }
+
+    });
+
+
+
+    // Reset button/wave when audio finishes
+
+    loveAudio.addEventListener('ended', () => {
+
+        playVoiceButton.innerHTML = '<i class="fas fa-play mr-2"></i> Suno Mera Khamosh Paigham';
+
+        voiceWave.classList.add('hidden');
+
+    });
+
+
+
+
+
+    // --- 6. FULL-SCREEN CONFETTI BLAST LOGIC ---
+
+    
+
+    // Array to store confetti pieces for cleanup
+
+    let confettiPieces = [];
+
+
+
+    confettiButton.addEventListener('click', () => {
+
+        confettiButton.textContent = 'WISH KHUL GAYA! 🎉'; 
+
+        confettiButton.disabled = true;
+
+        triggerConfetti();
+
+    });
+
+
+
+    function triggerConfetti() {
+
+        const colors = ['#E3A398', '#FFFFFF', '#F9B4AB', '#8C433C']; // Soft Gold, White, Pink, Deep Red
+
+        const numConfetti = 150; // Increased pieces for better blast effect
+
+
+
+        // Get the center point of the button's section on the screen
+
+        const section = document.getElementById('final');
+
+        const rect = section.getBoundingClientRect();
+
+        const centerX = rect.left + rect.width / 2;
+
+        const centerY = rect.top + rect.height / 2;
+
+        
+
+        confettiPieces = []; // Reset pieces array
+
+
+
+        for (let i = 0; i < numConfetti; i++) {
+
+            const piece = document.createElement('div');
+
+            piece.classList.add('confetti');
+
+            
+
+            // Random size and shape
+
+            piece.style.width = `${5 + Math.random() * 8}px`;
+
+            piece.style.height = `${5 + Math.random() * 8}px`;
+
+            piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+            piece.style.borderRadius = `${Math.random() > 0.5 ? '0%' : '50%'}`;
+
+
+
+            // START POSITION (Slightly randomized around the button's center)
+
+            piece.style.left = `${centerX + (Math.random() * 50 - 25)}px`; 
+
+            piece.style.top = `${centerY + (Math.random() * 50 - 25)}px`; 
+
+
+
+            // DYNAMIC CSS VARIABLES FOR BLAST END STATE
+
+            
+
+            // Final X position: Random horizontal spread (from -700 to 700 px from start)
+
+            const finalX = (Math.random() - 0.5) * window.innerWidth * 1.5; 
+
+            // Final Y position: Shoot up (-500) and then fall down (+700)
+
+            const finalY = -500 + Math.random() * 700; 
+
+            
+
+            piece.style.setProperty('--confetti-x', finalX);
+
+            piece.style.setProperty('--confetti-y', finalY);
+
+            piece.style.setProperty('--confetti-rot', Math.random() * 1000); // Massive rotation
+
+            piece.style.setProperty('--confetti-duration', `${2 + Math.random() * 3}s`);
+
+            
+
+            piece.style.animationDelay = `${Math.random() * 0.5}s`;
+
+
+
+            document.body.appendChild(piece);
+
+            confettiPieces.push(piece);
+
+        }
+
+        
+
+        // Clean up the pieces after animation finishes
+
+        setTimeout(() => {
+
+            confettiPieces.forEach(piece => piece.remove());
+
+            // Optional: Re-enable the button if you want it to be clicked again
+
+            // confettiButton.disabled = false;
+
+            // confettiButton.textContent = 'WISH KHOLO! 🎉';
+
+        }, 5500); 
+
+    }
+
+
+
+    // --- 7. NAVIGATION SMOOTH SCROLL ---
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+
+        anchor.addEventListener('click', function (e) {
+
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+                behavior: 'smooth'
+
+            });
+
+        });
+
+    });
+
+</script>
+
+</body></html>
